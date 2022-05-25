@@ -19,6 +19,24 @@ namespace Course2
             p.Quantidade = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Dados do produto: " + p);
+
+            //Adicionando produtos ao estoque
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos a ser adicionado ao estoque: ");
+            int qtd = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qtd);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+
+            //Removendo produtos do estoque
+            Console.WriteLine();
+            Console.Write("Digite o número de produtos a ser removidos do estoque: ");
+            int qtd1 = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qtd1);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
         }
     }
 }
